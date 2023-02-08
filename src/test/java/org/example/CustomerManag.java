@@ -25,7 +25,7 @@ public class CustomerManag {
         driver.manage().window().maximize();
         try {Thread.sleep(12000);} catch (InterruptedException e) {e.printStackTrace();}
         String userName = "gerasimgh";
-        String password = "WEKZpG";
+        String password = "QsI3Oy";
         driver.findElement(By.xpath("//input[@id='username']")).click();
         driver.findElement(By.xpath("//input[@id='username']")).sendKeys(userName);
         driver.findElement(By.xpath("//input[@id='password']")).click();
@@ -60,8 +60,62 @@ public class CustomerManag {
 //        try {Thread.sleep(1500);} catch (InterruptedException e) {e.printStackTrace();}
 //        driver.findElement(By.xpath("//span[text()=' Clear Filter ']")).click();
         try {Thread.sleep(1500);} catch (InterruptedException e) {e.printStackTrace();}
-        driver.findElement(By.xpath("//button[@id='create-entity-2']//em")).click();
-
+        driver.findElement(By.xpath("//button[@id='create-entity-2']//em")).click(); // add new CUSTOMER
+        driver.findElement(By.xpath("//div[text()=' First Name']/input")).click();
+        driver.findElement(By.xpath("//div[text()=' First Name']/input")).sendKeys("TEST");
+        driver.findElement(By.xpath("//div[text()=' Email ']/input")).sendKeys("test@mail.ru");
+        driver.findElement(By.xpath("//div[text()=' Email ']/input")).click();
+        driver.findElement(By.xpath("//div[text()=' Email ']/input")).sendKeys(Keys.PAGE_DOWN);
+        try {Thread.sleep(1500);} catch (InterruptedException e) {e.printStackTrace();}
+        driver.findElement(By.xpath("//div[text()=' Last Name']/input")).click();
+        driver.findElement(By.xpath("//div[text()=' Last Name']/input")).sendKeys("L Test");
+        driver.findElement(By.xpath("//div[text()=' BirthDate']//input")).click();
+        driver.findElement(By.xpath("//div[text()=' BirthDate']//input")).sendKeys("2000-01-01");
+        driver.findElement(By.xpath("//div[text()=' Citizenship']//descendant::span[3]")).click();
+        driver.findElement(By.xpath("//span[text()='Armenia']")).click();
+        try {Thread.sleep(1500);} catch (InterruptedException e) {e.printStackTrace();}
+        driver.findElement(By.xpath("//div[text()=' Gender* ']//select//option[text()='Male']")).click();
+        driver.findElement(By.xpath("//div[text()=' Education* ']//select//option[text()='Master']")).click();
+        try {Thread.sleep(1500);} catch (InterruptedException e) {e.printStackTrace();}
+        driver.findElement(By.xpath("//div[text()=' BirthDate']//input")).sendKeys(Keys.PAGE_DOWN);
+        try {Thread.sleep(1500);} catch (InterruptedException e) {e.printStackTrace();}
+        driver.findElement(By.xpath("//button[text()='Next']")).click();
+        try {Thread.sleep(1500);} catch (InterruptedException e) {e.printStackTrace();}
+        driver.findElement(By.xpath("//button[text()='Next']")).click();
+        driver.findElement(By.xpath("//button[text()='Next']")).sendKeys(Keys.PAGE_UP);
+        try {Thread.sleep(1500);} catch (InterruptedException e) {e.printStackTrace();}
+        // driver.findElement(By.xpath("//div[text()=' Passport Number']//input")).click();
+        driver.findElement(By.xpath("//div[text()=' Passport Number']//input")).sendKeys("AF0564482");
+        driver.findElement(By.xpath("//div[text()=' Issued By']//input")).click();
+        driver.findElement(By.xpath("//div[text()=' Issued By']//input")).sendKeys("001");
+        driver.findElement(By.xpath("//div[text()=' Valid Till']//input")).click();
+        driver.findElement(By.xpath("//div[text()=' Valid Till']//input")).sendKeys("2022-01-10");
+        driver.findElement(By.xpath("//div[text()=' Social Security Number ']//input")).click();
+        driver.findElement(By.xpath("//div[text()=' Social Security Number ']//input")).sendKeys(Keys.PAGE_DOWN);
+        try {Thread.sleep(1500);} catch (InterruptedException e) {e.printStackTrace();}
+        driver.findElement(By.xpath("//button[text()='Next']")).click();
+        try {Thread.sleep(1500);} catch (InterruptedException e) {e.printStackTrace();}
+        driver.findElement(By.xpath("//div[text()=' Street/Street Number* ']//input")).click();
+        driver.findElement(By.xpath("//div[text()=' Street/Street Number* ']//input")).sendKeys("Mantashyan");
+        driver.findElement(By.xpath("//div[text()=' Street/Street Number* ']//input")).click();
+        driver.findElement(By.xpath("//div[text()=' Street/Street Number* ']//input")).sendKeys(Keys.PAGE_UP);
+        driver.findElement(By.xpath("//div[text()=' Select Address Type * ']/select//option[3]")).click();
+        try {Thread.sleep(1500);} catch (InterruptedException e) {e.printStackTrace();}
+        driver.findElement(By.xpath("//div[text()=' Zip Postal Code ']//input")).click();
+        driver.findElement(By.xpath("//div[text()=' Zip Postal Code ']//input")).sendKeys("008");
+        try {Thread.sleep(1500);} catch (InterruptedException e) {e.printStackTrace();}
+        driver.findElement(By.xpath("//div[text()=' Zip Postal Code ']//input")).sendKeys(Keys.PAGE_DOWN);
+        driver.findElement(By.xpath("//div[text()=' Country* ']//descendant::span[2]")).click();
+        try {Thread.sleep(900);} catch (InterruptedException e) {e.printStackTrace();}
+        driver.findElement(By.xpath("//span[text()='Andorra']")).click();
+        try {Thread.sleep(900);} catch (InterruptedException e) {e.printStackTrace();}
+        driver.findElement(By.xpath("//div[text()=' City* ']//descendant::span[2]")).click();
+        driver.findElement(By.xpath("//span[text()='Andorra la Vella']")).click();
+        try {Thread.sleep(900);} catch (InterruptedException e) {e.printStackTrace();}
+        driver.findElement(By.xpath("//div[text()=' Street/Street Number* ']//input")).click();
+        driver.findElement(By.xpath("//div[text()=' Street/Street Number* ']//input")).sendKeys(Keys.PAGE_DOWN);
+        try {Thread.sleep(900);} catch (InterruptedException e) {e.printStackTrace();}
+        driver.findElement(By.xpath("//button[text()='Next']")).click();
 
     }
 }

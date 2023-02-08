@@ -21,7 +21,7 @@ public class Reports {
         driver.manage().window().maximize();
         try {Thread.sleep(8500);} catch (InterruptedException e) {e.printStackTrace();}
         String userName = "gerasimgh";
-        String password = "WEKZpG";
+        String password = "vaC1zB";
         driver.findElement(By.xpath("//input[@id='username']")).click();
         driver.findElement(By.xpath("//input[@id='username']")).sendKeys(userName);
         driver.findElement(By.xpath("//input[@id='password']")).click();
